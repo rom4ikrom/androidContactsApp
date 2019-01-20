@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="9"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/contactIcon"
+            style="@style/TextContactStyle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_row="0"
+            android:layout_rowSpan="3"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:contentDescription="@string/contactIconDesc"
+            android:src="@drawable/contact_icon" />
+
+        <Button
+            android:id="@+id/buttonCall"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:text="@string/btnCall"
+            android:onClick="onClickCall"
+            android:drawableLeft="@android:drawable/ic_menu_call"
+            android:drawableStart="@android:drawable/ic_menu_call"
+            style="@style/ButtonContactStyle"
+            />
+
+        <Button
+            android:id="@+id/buttonMessage"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@android:drawable/ic_menu_send"
+            android:text="@string/btnMessage"
+            style="@style/ButtonContactStyle"
+            android:drawableStart="@android:drawable/ic_menu_send" />
+
+        <Button
+            android:id="@+id/buttonEmail"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:text="@string/btnEmail"
+            style="@style/ButtonContactStyle"
+            android:drawableStart="@android:drawable/ic_dialog_email" />
+
+        <TextView
+            android:id="@+id/firstName_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:text="@string/txtFirstName"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="20dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="150dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/lastName_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:text="@string/txtLastName"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="150dp"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/number_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:text="@string/txtNumber"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="150dp"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/email_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:text="@string/txtEmail"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="150dp"
+            android:layout_row="6"
+            android:layout_column="1"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/address_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:text="@string/txtAddress"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="150dp"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/postcode_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:text="@string/txtPostcode"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            style="@style/TextContactStyle"/>
+
+        <TextView
+            android:id="@+id/postcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="150dp"
+            android:layout_row="8"
+            android:layout_column="1"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            style="@style/TextContactStyle"/>
+
+    </GridLayout>
+
+</android.support.design.widget.CoordinatorLayout>

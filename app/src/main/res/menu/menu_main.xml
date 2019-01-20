@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item android:id="@+id/action_add_new_contact"
+        android:icon="@drawable/add_circle_white_36dp"
+        android:title="@string/action_add_contact"
+        android:onClick="onClickAddNewContact"
+        app:showAsAction="ifRoom" />
+</menu>
